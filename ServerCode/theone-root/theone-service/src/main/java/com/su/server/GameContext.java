@@ -1,0 +1,10 @@
+package com.su.server;
+
+import org.springframework.stereotype.Component;
+
+import com.su.core.context.BaseGameContext;
+
+@Component
+public class GameContext extends BaseGameContext {
+	
+}

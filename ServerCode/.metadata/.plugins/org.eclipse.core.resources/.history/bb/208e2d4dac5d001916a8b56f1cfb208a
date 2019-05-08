@@ -1,0 +1,6 @@
+package com.su.core.context;
+
+public interface IUser<T> {
+	public T getActor();
+	public boolean isOnline();
+}

@@ -1,0 +1,5 @@
+package com.su.core.netty;
+
+public interface Handler<T> {
+	
+}

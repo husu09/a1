@@ -1,0 +1,48 @@
+package com.su.core.event;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class GameEventAdapter<T, B> implements GameEvent<T, B> {
+
+	@Autowired
+	private GameEventDispatcher gameEventDispatcher;
+
+	@PostConstruct
+	private void init() {
+		gameEventDispatcher.register(this);
+	}
+
+	@Override
+	public void serverStart() {
+		
+	}
+
+	@Override
+	public void serverStop() {
+		
+	}
+
+	@Override
+	public void dailyReset() {
+		
+	}
+
+	@Override
+	public void dailyReset(T t) {
+		
+	}
+
+	@Override
+	public void login(T t, B b) {
+		
+	}
+
+	@Override
+	public void logout(T t) {
+		
+	}
+
+	
+}

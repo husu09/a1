@@ -1,0 +1,64 @@
+package com.su.core.context;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.springframework.stereotype.Component;
+
+import com.su.core.akka.BaseActor;
+
+/**
+ * 存储所有在线用户
+ */
+@Component
+public class GameContext {
+	
+	/**
+	 * 是否接受请求
+	 * */
+	private volatile boolean accept;
+	
+	/**
+	 * 在线玩家
+	 * */
+	private Map<Long, BaseUser> userMap = new ConcurrentHashMap<>();
+	
+
+	public <T extends BaseUser> Map<Long, T> getPlayerContextMap() {
+		return (Map<Long, T>) userMap;
+	}
+	
+	public <T extends BaseUser> T getPlayer(long id) {
+		return (T) userMap.get(id);
+	}
+	
+	public <T extends BaseUser> T getPlayer(long id, Class<BaseUser> cls, Class<BaseActor> actorClass)  {
+		BaseUser user = userMap.get(id);
+		if (user == null) {
+			try {
+				   user = (BaseUser) cls.newInstance();
+				   user.setActor((BaseActor) actorClass.newInstance());
+				   BaseUser currUser = userMap.putIfAbsent(id, user);
+				   if (currUser != null ) {
+					   user = currUser;
+				   }
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return (T) user;
+	}
+
+	public boolean isAccept() {
+		return accept;
+	}
+
+	public void setAccept(boolean accept) {
+		this.accept = accept;
+	}
+	
+	
+	
+	
+		
+}

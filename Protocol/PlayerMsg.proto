@@ -1,0 +1,32 @@
+syntax = "proto2";
+package Msg;
+option java_package = "com.su.msg";
+option optimize_for = SPEED;
+
+// 玩家数据
+message PlayerMo {
+	optional int64 id = 1;								// id
+	optional string avatar = 2;							// 头像
+	optional string name = 3;							// 名称
+	optional int32 gender = 4;							// 性别
+	optional int32 level = 5[default = -1];				// 等级
+	optional int32 peanut = 6[default = -1];			// 花生
+	optional int32 diamond = 7[default = -1];			// 钻石
+	optional int32 keepVictoryCnt = 8[default = -1];	// 连胜
+	optional int32 totalCnt = 9[default = -1];			// 总对局
+	optional int32 victoryCnt = 10[default = -1];		// 胜利局数
+	optional int32 failureCnt= 11[default = -1];		// 失败局数
+}
+
+// 获取玩家数据
+message GetPlayer {
+}
+message GetPlayerTo {
+	optional PlayerMo player = 1;
+}
+
+// 玩家数据更新通知
+message UpdatePlayerNo {
+	optional PlayerMo player = 1;
+}
+

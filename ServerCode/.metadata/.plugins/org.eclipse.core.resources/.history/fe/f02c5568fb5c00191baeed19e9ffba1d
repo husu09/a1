@@ -1,0 +1,26 @@
+package com.su.server.po;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Transient;
+
+import com.su.common.po.Grid;
+import com.su.common.po.PlayerDetail;
+
+public class PlayerDetailPo extends PlayerDetail {
+	@Transient
+	private List<Grid> gridList;
+	public List<Grid> getGridList() {
+		if (gridList == null) {
+			gridList = JSON.parseArray(bagData, Grid.class);
+			if (gridList == null)
+				gridList = new ArrayList<>();
+
+		}
+		return gridList;
+	}
+	public void updateBagData() {
+		bagData = JSON.toJSONString(getGridList());
+	}
+}

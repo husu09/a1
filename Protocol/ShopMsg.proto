@@ -1,0 +1,13 @@
+syntax = "proto2";
+import "CommonMsg.proto";
+package Msg;
+option java_package = "com.su.msg";
+option optimize_for = SPEED;
+
+
+
+// 购买
+message Buy {
+	optional int32 cid = 1;			// 物品id
+}
+message BuyTo {}

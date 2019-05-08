@@ -1,0 +1,34 @@
+syntax = "proto2";
+package Msg;
+option java_package = "com.su.msg";
+option optimize_for = SPEED;
+
+
+// 物品格子
+message GridMo {
+	optional int32 id = 1;			// id
+	optional int32 cid = 2;			// 道具id
+	optional int32 count = 3;		// 数量
+}
+
+//背包数据
+message GetBag {}
+message GetBagTo {
+	repeated GridMo grid = 1;
+}
+
+// 删除通知
+message DeleteItemNo {
+	repeated int32 id = 1;		// id
+}
+
+// 增加通知
+message AddItemNo {
+	repeated GridMo grid = 1;
+}
+
+// 更新通知
+message UpdateItemNo {
+	repeated GridMo grid = 1;
+}
+

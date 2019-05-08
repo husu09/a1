@@ -1,0 +1,70 @@
+package com.su.core.event;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class GameEventDispatcher<T, B> implements GameEvent<T, B> {
+
+	private List<GameEvent> gameEventHandlers = new ArrayList<>();
+
+	/**
+	 * 注册到事件分发器
+	 */
+	public void register(GameEvent gameEvent) {
+		gameEventHandlers.add(gameEvent);
+	}
+
+	@Override
+	public void serverStart() {
+		for (GameEvent gameEvent : gameEventHandlers)
+			gameEvent.serverStart();
+	}
+
+	@Override
+	public void serverStop() {
+		for (GameEvent gameEvent : gameEventHandlers)
+			gameEvent.serverStop();
+	}
+
+	@Override
+	public void dailyReset() {
+		for (GameEvent gameEvent : gameEventHandlers)
+			gameEvent.dailyReset();
+	}
+
+	@Override
+	public void dailyReset(T t) {
+		for (GameEvent gameEvent : gameEventHandlers)
+			gameEvent.dailyReset(t);
+	}
+
+	@Override
+	public void login(T t, B b) {
+		for (GameEvent gameEvent : gameEventHandlers)
+			gameEvent.login(t, b);
+	}
+
+	@Override
+	public void logout(T t) {
+		for (GameEvent gameEvent : gameEventHandlers)
+			gameEvent.logout(t);
+	}
+
+	@Override
+	public void hour() {
+		for (GameEvent gameEvent : gameEventHandlers)
+			gameEvent.hour();
+	}
+
+	@Override
+	public void hour(T t) {
+		for (GameEvent gameEvent : gameEventHandlers)
+			gameEvent.hour(t);
+	}
+
+	
+
+}

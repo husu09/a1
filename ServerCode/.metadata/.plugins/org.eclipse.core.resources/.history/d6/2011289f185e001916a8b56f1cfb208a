@@ -1,0 +1,7 @@
+package com.su.core.context;
+
+import com.su.core.akka.BaseActor;
+
+public interface IUser {	public BaseActor getActor();
+	public boolean isOnline();
+}

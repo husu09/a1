@@ -1,0 +1,7 @@
+package com.su.server.po;
+
+import com.su.common.po.PlayerDetail;
+
+public class MailPo extends PlayerDetail {
+
+}

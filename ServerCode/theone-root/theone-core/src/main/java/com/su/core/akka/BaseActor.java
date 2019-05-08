@@ -1,0 +1,43 @@
+package com.su.core.akka;
+
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.annotation.PostConstruct;
+
+public class BaseActor {
+	
+	private Map<String, IExecutor> executorMap = new HashMap<>();
+	
+	/**
+	 * 预加载Actor中的方法
+	 * */
+	@PostConstruct
+	public void init() {
+		Method[] methods = this.getClass().getMethods();
+		for(Method method : methods) {
+			if (method.getAnnotation(Executor.class) == null) {
+				continue;
+			}
+			executorMap.put(method.getName(), new IExecutor() {
+				
+				@Override
+				public void execute(Object... args) {
+					try {
+						method.invoke(this, args);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			});
+		}
+	}
+	
+	/**
+	 * 通过名称调用方法
+	 * */
+	public void call(String executorName, Object... args) {
+		executorMap.get(executorName).execute();
+	}
+}

@@ -1,0 +1,21 @@
+package com.su.core.context;
+
+import com.su.core.akka.BaseActor;
+
+import io.netty.channel.ChannelHandlerContext;
+
+public class User {
+	private BaseActor actor;
+	private ChannelHandlerContext ctx;
+	
+	public BaseActor getActor() {
+		return actor;
+	}
+	
+	public boolean isOnline() {
+		if (ctx != null) {
+			return true;
+		}
+		return false;
+	}
+}

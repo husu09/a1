@@ -1,0 +1,42 @@
+package com.su.common.po;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import com.su.common.data.Cache;
+
+@Cache(startId = 10000000000L)
+@Entity
+public class PlayerDetail implements Serializable {
+	
+	public PlayerDetail() {
+		
+	}
+
+	@Id
+	private long id;
+	public PlayerDetail(long id){
+		this.id = id;
+	}
+	public long getId() {
+		return id;
+	}
+	/**
+	 * 背包
+	 */
+	private String bagData;
+	/**
+	 * 角色
+	 * */
+	private String roleData;
+	/**
+	 * 寻宝
+	 * */
+	private String xunBaoData;
+	/**
+	 * 拍卖
+	 * */
+	private String acuItemData;
+}

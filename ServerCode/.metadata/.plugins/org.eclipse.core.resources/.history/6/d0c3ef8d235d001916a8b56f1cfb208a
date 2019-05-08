@@ -1,0 +1,19 @@
+package com.su.core.schedule;
+
+import org.quartz.Scheduler;
+import org.quartz.SchedulerFactory;
+import org.quartz.impl.StdSchedulerFactory;
+
+public class QuartzManager {
+	
+	public static void start() {
+		try {
+			SchedulerFactory factory = new StdSchedulerFactory("quartz.properties");
+			Scheduler scheduler = factory.getScheduler();
+			scheduler.start();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

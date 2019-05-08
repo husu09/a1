@@ -1,0 +1,55 @@
+1554883246524	Rename type 'IntConvert'
+1554885615852	Delete element
+1554885619833	Delete elements
+1554885623009	Delete elements
+1554886364916	Delete elements
+1554886378074	Delete element
+1554887007015	Delete element
+1554896268959	Rename type 'ProtobufDecoder'
+1554896276256	Rename type 'ProtobufEncoder'
+1554896302728	Rename type 'ProtobufVarint32FrameDecoder'
+1554896309816	Rename type 'ProtobufVarint32LengthFieldPrepender'
+1554908751534	Copy compilation unit
+1554908961874	Delete element
+1554908968452	Rename compilation unit 'NettyServerHandler2.java'
+1554909338186	Delete element
+1554909857519	Delete element
+1554910650453	Delete element
+1554913357008	Copy compilation units
+1554915725423	Copy compilation units
+1554915729075	Copy package
+1554915760370	Copy package
+1554915764582	Copy package
+1554915773494	Copy package
+1554915886713	Move compilation units
+1554915922506	Move compilation units
+1554915938733	Move compilation units
+1554915957658	Move compilation units
+1554915963252	Delete element
+1554987087797	Copy compilation unit
+1554987107107	Rename type 'AkkaContext'
+1555039892460	Delete element
+1555039916626	Copy compilation unit
+1555039923632	Delete element
+1555040101272	Copy compilation unit
+1555040141913	Copy compilation unit
+1555040161067	Delete element
+1555057373598	Delete element
+1555059632812	Delete element
+1555062214489	Copy compilation unit
+1555062235993	Copy compilation unit
+1555062252260	Rename type 'Handler'
+1555062296933	Rename type 'MyHandler'
+1555080834967	Rename type 'Actor'
+1555080855257	Rename type 'GameEvent'
+1555081258381	Rename type 'IActor'
+1555168019772	Rename type 'IExecute'
+1555168035841	Rename type 'IPerformer'
+1555178138412	Copy compilation unit
+1555178597606	Delete element
+1555178915936	Rename type 'Actor'
+1555179545403	Delete element
+1555180188681	Rename type 'User'
+1555180224325	Rename type 'BaseUser'
+1555180392501	Rename type 'GameEventAdapter'
+1555180916321	Delete element

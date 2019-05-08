@@ -1,0 +1,30 @@
+package com.su.server.po;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.su.common.po.Mail;
+import com.su.common.po.PlayerDetail;
+import com.su.common.util.JSONUtil;
+import com.su.config.obj.Item;
+
+public class MailPo extends Mail {
+	
+	@Transient
+	private List<Item> rewards;
+	public List<Item> getRewards() {
+		if (rewards == null) {
+			rewards = JSONUtil.dataDecode(rewardData, new TypeReference<List<Item>>() {
+			});
+			if (rewards == null)
+				rewards = new ArrayList<>();
+		}
+		return rewards;
+	}
+	public void updateRewardData() {
+		rewardData = JSONUtil.dataEncode(getRewards());
+	}
+}

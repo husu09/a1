@@ -1,0 +1,16 @@
+package com.su.core.schedule;
+
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+import com.su.common.util.SpringUtil;
+
+public class ZeroJob implements Job {
+
+	@Override
+	public void execute(JobExecutionContext context) throws JobExecutionException {
+		
+	}
+
+}

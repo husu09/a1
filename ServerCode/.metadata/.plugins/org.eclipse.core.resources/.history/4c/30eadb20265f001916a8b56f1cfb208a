@@ -1,0 +1,27 @@
+package com.su.server;
+
+import org.springframework.stereotype.Component;
+
+import com.su.core.netty.INettyHandler;
+
+import io.netty.channel.ChannelHandlerContext;
+
+@Component
+public class NettyHandlerImpl implements INettyHandler {
+	
+	@Override
+	public boolean isAccept() {
+		return false;
+	}
+
+	@Override
+	public void receiveMessage(ChannelHandlerContext ctx, Object msg) {
+		
+	}
+
+	@Override
+	public void disconnect(ChannelHandlerContext ctx) {
+		
+	}
+
+}

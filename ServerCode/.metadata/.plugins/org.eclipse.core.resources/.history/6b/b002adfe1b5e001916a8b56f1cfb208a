@@ -1,0 +1,23 @@
+package com.su.core.schedule;
+
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+import com.su.common.util.SpringUtil;
+import com.su.core.context.GameContext;
+
+public class HourJob implements Job {
+	
+	private GameContext gameContext;
+	
+	public HourJob() {
+		gameContext = SpringUtil.getContext().getBean(GameContext.class);
+	}
+	
+	@Override
+	public void execute(JobExecutionContext context) throws JobExecutionException {
+		
+	}
+
+}

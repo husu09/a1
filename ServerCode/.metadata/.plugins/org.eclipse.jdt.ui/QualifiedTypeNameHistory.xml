@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Isolation"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Propagation"/>
+<fullyQualifiedTypeName name="com.rabbitmq.client.DeliverCallback"/>
+<fullyQualifiedTypeName name="org.hibernate.EmptyInterceptor"/>
+<fullyQualifiedTypeName name="com.su.excel.core.ExcelUtil"/>
+<fullyQualifiedTypeName name="com.su.common.util.JSONUtil"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.core.type.TypeReference"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonInclude.Include"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.DeserializationFeature"/>
+<fullyQualifiedTypeName name="com.su.test.JacksonTest.Person"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.PropertyAccessor"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ser.FilterProvider"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreType"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="org.quartz.Scheduler"/>
+<fullyQualifiedTypeName name="org.quartz.Job"/>
+<fullyQualifiedTypeName name="com.su.core.context.IActor"/>
+<fullyQualifiedTypeName name="com.su.core.akka.IExecute"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.su.core.akka.IExecutor"/>
+<fullyQualifiedTypeName name="com.google.protobuf.MessageLite"/>
+<fullyQualifiedTypeName name="com.su.core.context.GameContext"/>
+<fullyQualifiedTypeName name="com.su.core.akka.EventActorType"/>
+<fullyQualifiedTypeName name="com.su.core.netty.INettyHandler"/>
+<fullyQualifiedTypeName name="com.su.core.context.BaseGameContext"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="com.su.core.context.BaseUserContext"/>
+<fullyQualifiedTypeName name="com.su.core.akka.BaseActor"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.su.server.PlayerActorType"/>
+<fullyQualifiedTypeName name="com.su.core.akka.AkkaUtil"/>
+<fullyQualifiedTypeName name="com.su.server.PLayerActor"/>
+<fullyQualifiedTypeName name="com.su.common.util.SpringUtil"/>
+<fullyQualifiedTypeName name="com.su.server.GameContext"/>
+<fullyQualifiedTypeName name="com.su.server.PlayerContext"/>
+<fullyQualifiedTypeName name="com.su.core.akka.Executor"/>
+</qualifiedTypeNameHistroy>

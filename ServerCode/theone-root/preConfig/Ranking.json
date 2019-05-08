@@ -1,0 +1,277 @@
+{
+  "10" : {
+    "id" : 10,
+    "name" : "白银5",
+    "eddScoreRate" : 92,
+    "riseScore" : 200,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "11" : {
+    "id" : 11,
+    "name" : "白银4",
+    "eddScoreRate" : 92,
+    "riseScore" : 200,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "12" : {
+    "id" : 12,
+    "name" : "白银3",
+    "eddScoreRate" : 92,
+    "riseScore" : 200,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "13" : {
+    "id" : 13,
+    "name" : "白银2",
+    "eddScoreRate" : 92,
+    "riseScore" : 200,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "14" : {
+    "id" : 14,
+    "name" : "白银1",
+    "eddScoreRate" : 92,
+    "riseScore" : 200,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "20" : {
+    "id" : 20,
+    "name" : "黄金5",
+    "eddScoreRate" : 94,
+    "riseScore" : 300,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "21" : {
+    "id" : 21,
+    "name" : "黄金4",
+    "eddScoreRate" : 94,
+    "riseScore" : 300,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "22" : {
+    "id" : 22,
+    "name" : "黄金3",
+    "eddScoreRate" : 94,
+    "riseScore" : 300,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "23" : {
+    "id" : 23,
+    "name" : "黄金2",
+    "eddScoreRate" : 94,
+    "riseScore" : 300,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "24" : {
+    "id" : 24,
+    "name" : "黄金1",
+    "eddScoreRate" : 94,
+    "riseScore" : 300,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "30" : {
+    "id" : 30,
+    "name" : "钻石5",
+    "eddScoreRate" : 96,
+    "riseScore" : 400,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "31" : {
+    "id" : 31,
+    "name" : "钻石4",
+    "eddScoreRate" : 96,
+    "riseScore" : 400,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "32" : {
+    "id" : 32,
+    "name" : "钻石3",
+    "eddScoreRate" : 96,
+    "riseScore" : 400,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "33" : {
+    "id" : 33,
+    "name" : "钻石2",
+    "eddScoreRate" : 96,
+    "riseScore" : 400,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "34" : {
+    "id" : 34,
+    "name" : "钻石1",
+    "eddScoreRate" : 96,
+    "riseScore" : 400,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "40" : {
+    "id" : 40,
+    "name" : "宗师5",
+    "eddScoreRate" : 98,
+    "riseScore" : 500,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "41" : {
+    "id" : 41,
+    "name" : "宗师4",
+    "eddScoreRate" : 98,
+    "riseScore" : 500,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "42" : {
+    "id" : 42,
+    "name" : "宗师3",
+    "eddScoreRate" : 98,
+    "riseScore" : 500,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "43" : {
+    "id" : 43,
+    "name" : "宗师2",
+    "eddScoreRate" : 98,
+    "riseScore" : 500,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "44" : {
+    "id" : 44,
+    "name" : "宗师1",
+    "eddScoreRate" : 98,
+    "riseScore" : 500,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "50" : {
+    "id" : 50,
+    "name" : "王者5",
+    "eddScoreRate" : 100,
+    "riseScore" : 600,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "51" : {
+    "id" : 51,
+    "name" : "王者4",
+    "eddScoreRate" : 100,
+    "riseScore" : 600,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "52" : {
+    "id" : 52,
+    "name" : "王者3",
+    "eddScoreRate" : 100,
+    "riseScore" : 600,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "53" : {
+    "id" : 53,
+    "name" : "王者2",
+    "eddScoreRate" : 100,
+    "riseScore" : 600,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "54" : {
+    "id" : 54,
+    "name" : "王者1",
+    "eddScoreRate" : 100,
+    "riseScore" : 600,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  }
+}

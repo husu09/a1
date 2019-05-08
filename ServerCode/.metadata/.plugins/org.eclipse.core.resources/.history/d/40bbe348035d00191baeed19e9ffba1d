@@ -1,0 +1,36 @@
+package com.su.core.event;
+
+import com.su.core.context.PlayerContext;
+import com.su.msg.LoginMsg.LoginTo;
+
+public interface GameEvent<T, B> {
+	/**
+	 * 服务启动
+	 */
+	public void serverStart();
+
+	/**
+	 * 服务关闭
+	 */
+	public void serverStop();
+
+	/**
+	 * 服务数据每日重置
+	 */
+	public void dailyReset();
+
+	/**
+	 * 玩家数据每日重置
+	 */
+	public void dailyReset(T t);
+
+	/**
+	 * 登录
+	 */
+	public void login(T t, B b);
+
+	/**
+	 * 登出
+	 */
+	public void logout(T t);
+}

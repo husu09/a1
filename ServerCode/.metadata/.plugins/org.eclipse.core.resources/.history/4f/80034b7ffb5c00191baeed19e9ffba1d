@@ -1,0 +1,58 @@
+package com.su.common.po;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
+import com.su.common.data.Cache;
+import com.su.common.obj.Grid;
+import com.su.common.obj.Role;
+
+@Cache(startId = 10000000000L)
+@Entity
+public class PlayerDetail implements Serializable {
+	
+	public PlayerDetail() {
+		
+	}
+
+	@Id
+	private long id;
+	public PlayerDetail(long id){
+		this.id = id;
+	}
+	public long getId() {
+		return id;
+	}
+	/**
+	 * 背包
+	 */
+	private String bagData;
+	
+	
+	/**
+	 * 角色
+	 * */
+	private String roleData;
+	
+	/**
+	 * 寻宝
+	 * */
+	private String xunBaoData;
+	
+	
+	/**
+	 * 拍卖
+	 * */
+	private String acuItemData;
+	
+
+}

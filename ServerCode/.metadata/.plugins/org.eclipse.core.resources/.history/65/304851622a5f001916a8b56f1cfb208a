@@ -1,0 +1,41 @@
+package com.su.server;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.su.core.netty.INettyHandler;
+import com.su.core.netty.PlayerContext;
+
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.util.Attribute;
+import io.netty.util.AttributeKey;
+
+@Component
+public class NettyHandlerImpl implements INettyHandler {
+	
+	@Autowired
+	private GameContext gameContext;
+	
+	@Override
+	public boolean isAccept() {
+		return gameContext.isAccept();
+	}
+	
+	public static final AttributeKey<Long> PLAYER_ID = AttributeKey.valueOf("PLAYER_ID");
+	
+	@Override
+	public void receiveMessage(ChannelHandlerContext ctx, Object msg) {
+		Attribute<Long> attr = ctx.channel().attr(PLAYER_ID);
+		Long playerId = attr.get();
+		if (playerId != null) {
+			PlayerContext playerCtx = gameContext.getUser(playerId);
+			playerCtx.getActor()
+		}
+	}
+
+	@Override
+	public void disconnect(ChannelHandlerContext ctx) {
+		
+	}
+
+}

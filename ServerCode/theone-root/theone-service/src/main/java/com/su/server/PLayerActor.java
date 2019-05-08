@@ -1,0 +1,95 @@
+package com.su.server;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.protobuf.MessageLite;
+import com.su.common.po.Player;
+import com.su.common.util.SpringUtil;
+import com.su.core.action.ActionContext;
+import com.su.core.action.ActionMeta;
+import com.su.core.akka.BaseActor;
+import com.su.core.akka.Executor;
+import com.su.core.event.GameEventDispatcher;
+import com.su.core.netty.NettyServerHandler;
+import com.su.msg.LoginMsg.LoginTo;
+import com.su.msg.PlayerMsg.UpdatePlayerNo;
+import com.su.msg.TableMsg.PlayerResultMo;
+
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.util.Attribute;
+
+public class PLayerActor extends BaseActor{
+
+	private Logger logger = LoggerFactory.getLogger(PLayerActor.class);
+
+	private ActionContext actionContext = SpringUtil.getContext().getBean(ActionContext.class);
+	private GameContext gameContext = SpringUtil.getContext().getBean(GameContext.class);
+	private GameEventDispatcher gameEventDispatcher = SpringUtil.getContext().getBean(GameEventDispatcher.class);
+	private BridgeService bridgeService =  SpringUtil.getContext().getBean(BridgeService.class);
+	
+	@Executor
+	public void process(ChannelHandlerContext ctx, MessageLite messageLite) {
+		try {
+			ActionMeta actionMeta = actionContext.getActionMetaMap().get(messageLite.getClass().getSimpleName());
+			if (actionMeta == null) {
+				// 没有找到对应的协议处理类
+				logger.error("not find action-meta {}", messageLite.getClass().getSimpleName());
+				return;
+			}
+			PlayerContext playerContext = null;
+			Attribute<Long> attr = ctx.channel().attr(NettyHandler.PLAYER_ID);
+			Long playerId = attr.get();
+			if (playerId != null) {
+				playerContext = gameContext.getUser(playerId);
+			}
+			if (actionMeta.isMustLogin()) {
+				if (playerContext == null) {
+					// 没有找到对应的PlayerContext
+					logger.error("not find player context");
+					return;
+				}
+				playerContext.getBuilder().clear();
+				actionMeta.getMethod().invoke(actionMeta.getExecutor(), playerContext, messageLite);
+			} else {
+				if (playerContext == null)
+					playerContext = new PlayerContext();
+				playerContext.setCtx(ctx);
+				playerContext.setActor(this);
+				actionMeta.getMethod().invoke(actionMeta.getExecutor(), playerContext, messageLite);
+			}
+			// 玩家数据更新通知
+			if (playerContext.isNotice())
+				playerContext.write(UpdatePlayerNo.newBuilder().setPlayer(playerContext.getBuilder()));
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Executor
+	public void logout(PlayerContext playerContext) {
+		gameEventDispatcher.logout(playerContext);
+	}
+
+	public void checkRefresh(PlayerContext playerContext) {
+
+	}
+
+	public void login(PlayerContext playerContext, LoginTo.Builder builder) {
+		gameEventDispatcher.login(playerContext, builder);
+	}
+
+	public PlayerResultMo doTableResult(TableResult tableResult) {
+		return bridgeService.doTableResult(tableResult);
+	}
+
+	public void doContestClose(int ranking) {
+		bridgeService.doContestClose(ranking);
+	}
+
+	public Player getPlayerById(long id) {
+		return bridgeService.getPlayerById(id);
+	}
+
+}

@@ -1,0 +1,42 @@
+{
+  "1" : {
+    "id" : 1,
+    "valueInt" : 99
+  },
+  "2" : {
+    "id" : 2,
+    "valueItem" : {
+      "type" : 3,
+      "sysId" : 4001,
+      "count" : 1
+    }
+  },
+  "3" : {
+    "id" : 3,
+    "valueInt" : 20
+  },
+  "4" : {
+    "id" : 4,
+    "valueItem" : {
+      "type" : 2,
+      "sysId" : 0,
+      "count" : 100
+    }
+  },
+  "5" : {
+    "id" : 5,
+    "valueItem" : {
+      "type" : 2,
+      "sysId" : 0,
+      "count" : 100
+    }
+  },
+  "6" : {
+    "id" : 6,
+    "valueItem" : {
+      "type" : 2,
+      "sysId" : 0,
+      "count" : 100
+    }
+  }
+}

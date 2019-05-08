@@ -1,0 +1,6 @@
+package com.su.server.po;
+
+public class Child extends Super {
+	public static void main(String[] args) {
+	}
+}

@@ -1,0 +1,19 @@
+package com.su.core.netty;
+
+import io.netty.channel.ChannelHandlerContext;
+
+public interface Handler {
+	/**
+	 * 是否接受连接
+	 * */
+	public boolean isAccept();
+	/**
+	 * 接收消息
+	 * */
+	public void receiveMessage(ChannelHandlerContext ctx, Object msg);
+	/**
+	 * 断开连接
+	 * */
+	public void disconnect(ChannelHandlerContext ctx);
+	
+}

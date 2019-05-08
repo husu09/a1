@@ -1,0 +1,42 @@
+{
+  "10" : {
+    "id" : 10,
+    "constId" : 1,
+    "ranking" : 1,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 1000
+    }
+  },
+  "11" : {
+    "id" : 11,
+    "constId" : 1,
+    "ranking" : 2,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 800
+    }
+  },
+  "12" : {
+    "id" : 12,
+    "constId" : 1,
+    "ranking" : 3,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 500
+    }
+  },
+  "13" : {
+    "id" : 13,
+    "constId" : 1,
+    "ranking" : 4,
+    "reward" : {
+      "type" : 1,
+      "sysId" : 0,
+      "count" : 300
+    }
+  }
+}

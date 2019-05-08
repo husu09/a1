@@ -1,0 +1,7 @@
+package com.su.core.context;
+
+import com.su.core.akka.BaseActor;
+
+public class User {
+	private BaseActor actor;
+}

@@ -1,0 +1,10 @@
+syntax = "proto2";
+package Msg;
+option java_package = "com.su.msg";
+option optimize_for = SPEED;
+
+
+// 通知
+message NoticeTo {
+	option string content = 1;	//	内容
+}

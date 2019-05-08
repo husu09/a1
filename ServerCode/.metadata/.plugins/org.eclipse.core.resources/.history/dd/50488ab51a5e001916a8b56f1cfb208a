@@ -1,0 +1,70 @@
+package com.su.core.event;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.google.protobuf.MessageLite;
+import com.su.core.context.BaseUserContext;
+
+public class BaseGameEvent<T extends BaseUserContext, B extends MessageLite> implements IGameEvent<T, B> {
+
+	@Autowired
+	private GameEventDispatcher gameEventDispatcher;
+
+	@PostConstruct
+	private void init() {
+		gameEventDispatcher.register(this);
+	}
+
+	@Override
+	public void serverStart() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void serverStop() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void zero() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void zero(T t) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void hour() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void hour(T t) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void login(T t, B b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void logout(T t) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
+}

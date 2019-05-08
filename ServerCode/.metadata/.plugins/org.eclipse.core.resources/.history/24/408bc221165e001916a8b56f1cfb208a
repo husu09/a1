@@ -1,0 +1,5 @@
+package com.su.core.akka;
+
+public interface IExecutor {
+	public void execute();
+}
